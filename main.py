@@ -77,13 +77,20 @@ class App():
 
             tipo_de_temp = self.combo_temp.get()
             valor_temp = self.temp_entry.get()
-            if tipo_de_temp == 'F':
-                resultadoC = (int(valor_temp) - 32) * 5 / 9
-                print(resultadoC)
-            else:
-                resultadoF = (int(valor_temp) * 9 / 5) + 32
-                print(resultadoF)
 
+            if tipo_de_temp == 'F':
+                resultado = (int(valor_temp) - 32) * 5 / 9
+                print(resultado)
+                self.label_resul = Label(text=f"O resultado da conversão é igual a: {resultado}")
+                self.label_resul.place(relx=0.1, rely=0.18, relheight=0.06, relwidth=0.4)
+                self.label_resul.configure(font=('Dialog', 12), background='white')
+
+            else:
+                resultado = (int(valor_temp) * 9 / 5) + 32
+                print(resultado)
+                self.label_resul = Label(text=f"O resultado da conversão é igual a: {resultado}")
+                self.label_resul.place(relx=0.03, rely=0.18, relheight=0.06, relwidth=0.4)
+                self.label_resul.configure(font=('Dialog', 12), background='white')
 
 
         self.conver_btn=Button(self.frame, text='Converter', font=('Dialog', 12), command=converter)
