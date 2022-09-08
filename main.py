@@ -92,7 +92,7 @@ class App():
                 self.label_resul.place(relx=0.03, rely=0.18, relheight=0.06, relwidth=0.6)
                 self.label_resul.configure(font=('Dialog', 12), background='white')
 
-
+        # Botão para converter:
         self.conver_btn=Button(self.frame, text='Converter', font=('Dialog', 12), command=converter)
         self.conver_btn.place(relx=0.23, rely=0.07, relheight=0.06, relwidth=0.13)
 
