@@ -78,16 +78,16 @@ class App():
             tipo_de_temp = self.combo_temp.get()
             valor_temp = self.temp_entry.get()
 
+            # Se a temperatura selecionada for F:
             if tipo_de_temp == 'F':
                 resultado = (int(valor_temp) - 32) * 5 / 9
-                print(resultado)
                 self.label_resul = Label(text=f"O resultado da conversão é igual a: {round(resultado, 2)}")
-                self.label_resul.place(relx=0.1, rely=0.18, relheight=0.06, relwidth=0.6)
+                self.label_resul.place(relx=0.03, rely=0.18, relheight=0.06, relwidth=0.6)
                 self.label_resul.configure(font=('Dialog', 12), background='white')
 
+            # Senão será C:
             else:
                 resultado = (int(valor_temp) * 9 / 5) + 32
-                print(resultado)
                 self.label_resul = Label(text=f"O resultado da conversão é igual a: {round(resultado, 2)}")
                 self.label_resul.place(relx=0.03, rely=0.18, relheight=0.06, relwidth=0.6)
                 self.label_resul.configure(font=('Dialog', 12), background='white')
